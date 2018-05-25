@@ -24,7 +24,7 @@ public class LoginStatusServlet extends HttpServlet{
 				"<html>\n" +
 				"<head><title>" + title + "</title></head>\n" +
 				"<body>\n" +
-				" Member ID : " + request.getParameter("email") + "\n" +
+				" ¸â¹ö ID : " + request.getParameter("email") + "\n" +
 				" Password : " + request.getParameter("password") + "\n" +
 				"</body>" +
 				"</html>");

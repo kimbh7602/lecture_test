@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class SignUpFormServlet extends HttpServlet {
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html"); // 브라우저가 해석하는 방식이 달라짐
+		response.setCharacterEncoding("UTF-8");
 		
 		PrintWriter out = response.getWriter();
 		String host = request.getContextPath();
@@ -69,6 +70,28 @@ public class SignUpFormServlet extends HttpServlet {
 				"              <label for=\"username\">Name</label>\r\n" + 
 				"              <input type=\"text\" name = \"name\" class=\"form-control\" id=\"username\" placeholder=\"Please write your name\">\r\n" + 
 				"            </div>\r\n" + 
+				"<div class=\"btn-group\" data-toggle=\"buttons\">\r\n" + 
+				"  <label class=\"btn-toggle btn-secondary active\">\r\n" + 
+				"    <input type=\"checkbox\" name = \"hobbies\" value = \"01\" checked autocomplete=\"off\"> 음악감상\r\n" + 
+				"  </label>\r\n" + 
+				"  <label class=\"btn-toggle btn-secondary\">\r\n" + 
+				"    <input type=\"checkbox\" name = \"hobbies\" value = \"02\" autocomplete=\"off\"> 독서\r\n" + 
+				"  </label>\r\n" + 
+				"  <label class=\"btn-toggle btn-secondary\">\r\n" + 
+				"    <input type=\"checkbox\" name = \"hobbies\" value = \"03\" autocomplete=\"off\"> 음주가무\r\n" + 
+				"  </label>\r\n" + 
+				"</div>" +
+				"<div class=\"btn-group\" data-toggle=\"buttons\">\r\n" + 
+				"  <label class=\"btn-radio btn-secondary active\">\r\n" + 
+				"    <input type=\"radio\" name=\"addr\" value = \"101\" id=\"option1\"  autocomplete=\"off\" checked> 경기도\r\n" + 
+				"  </label>\r\n" + 
+				"  <label class=\"btn-radio btn-secondary\">\r\n" + 
+				"    <input type=\"radio\" name=\"addr\" value = \"102\" id=\"option2\" autocomplete=\"off\"> 전라도\r\n" + 
+				"  </label>\r\n" + 
+				"  <label class=\"btn-radio btn-secondary\">\r\n" + 
+				"    <input type=\"radio\" name=\"addr\" value = \"103\" id=\"option3\" autocomplete=\"off\"> 경상도\r\n" + 
+				"  </label>\r\n" + 
+				"</div>" +
 				"            <div class=\"form-group\">\r\n" + 
 				"                <label>Agree sub</label>\r\n" + 
 				"              <div data-toggle=\"buttons\">\r\n" + 
